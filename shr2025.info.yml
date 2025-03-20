@@ -1,4 +1,4 @@
-name: Bootstrap Barrio Subtheme
+name: shr2025
 type: theme
 description: 'Basic structure for a Bootstrap Barrio SubTheme.'
 core_version_requirement: ^10.3 || ^11
