@@ -123,7 +123,7 @@ $info = [
     'drupalSettings' => [
       'color' => [
         // Put the logo path into JavaScript for the live preview.
-        'logo' => theme_get_setting('logo.url', 'bootstrap_barrio_subtheme'),
+        'logo' => theme_get_setting('logo.url', 'shr2025'),
       ],
     ],
   ],
