@@ -1,0 +1,45 @@
+{% extends "@bootstrap_barrio/layout/page.html.twig" %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center arctic-winter-header">
+        <h1>Arctic Winter</h1>
+        <p class="welcome">Welcome to my Drupal 11 subtheme!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Articles</h2>
+        <div class="region-content front-page-article">
+          {{ drupal_entity('node', 62) }}
+        </div>
+        <div class="region-content front-page-article">
+          {{ drupal_entity('node', 59) }}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h2>Images</h2>
+        <div class="region-sidebar">
+          <img src="{{ directory }}/images/iceberg_image1.jpg" class="img-thumbnail" alt="Image of an iceberg" title="Iceberg">
+          <img src="{{ directory }}/images/polar_bear_image.jpg" class="img-thumbnail" alt="Image of a polar bear" title="Polar bear">
+          <img src="{{ directory }}/images/the_arctic_image.jpg" class="img-thumbnail" alt="Image of the arctic" title="Arctic">
+          <img src="{{ directory }}/images/arctic_fox_image.jpg" class="img-thumbnail" alt="Image of a arctic fox" title="Arctic fox">
+        </div>
+      </div>
+    </div>
+    {% if page.sidebar_first %}
+      <aside class="region-sidebar-first">{{ page.sidebar_first }}</aside>
+    {% endif %}
+    {% if page.sidebar_second %}
+      <aside class="region-sidebar-second">{{ page.sidebar_second }}</aside>
+    {% endif %}
+    
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Menu</h2>
+        <div class="region-menu">{{ drupal_menu('main') }}</div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
