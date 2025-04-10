@@ -1,0 +1,89 @@
+{% extends "themes/shr2025/templates/_page.html.twig" %}
+
+
+{% block content %}
+<div class="container">
+<!-- Header -->
+<header class="site-header">
+<div class="row">
+<div class="col-md-12 text-center">
+<h1>Mitt Drupal-projekt</h1>
+<img src="{{ directory }}/images/logo.png" alt="Site Logo" class="site-logo">
+</div>
+</div>
+</header>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid">
+<ul class="navbar-nav">
+<li class="nav-item"><a class="nav-link" href="#">Hem</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Om oss</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+</ul>
+</div>
+</nav>
+
+    <!-- Carousel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Bild 1">
+<div class="carousel-caption d-none d-md-block">
+<h5>Exempel Slide 1</h5>
+<p>Detta är en testtext för att se om karusellen fungerar.</p>
+</div>
+</div>
+<div class="carousel-item">
+<img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Bild 2">
+<div class="carousel-caption d-none d-md-block">
+<h5>Exempel Slide 2</h5>
+<p>Ytterligare en testtext för Bootstrap Carousel.</p>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+
+    <!-- Main Content -->
+<div class="row">
+<div class="col-md-8">
+<h2>Latest Articles</h2>
+<div class="region-content front-page-article">
+<article>
+<h3>Exempelartikel 1</h3>
+<p>Detta är en exempeltext för att testa layouten.</p>
+</article>
+<article>
+<h3>Exempelartikel 2</h3>
+<p>En annan artikel för att se om Bootstrap-grid fungerar korrekt.</p>
+</article>
+</div>
+</div>
+<div class="col-md-4">
+<h2>Sidebar</h2>
+<div class="region-sidebar">
+<p>Detta är en testtext i sidofältet.</p>
+</div>
+</div>
+</div>
+ 
+    <!-- Footer -->
+<footer class="site-footer">
+<div class="row">
+<div class="col-md-12 text-center">
+<p>&copy; {{ "now"|date("Y") }} Mitt Drupal-projekt. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+{% endblock %}
+ 
