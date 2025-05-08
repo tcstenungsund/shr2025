@@ -1,0 +1,119 @@
+{% extends "@bootstrap_barrio/layout/page.html.twig" %}
+
+{% block content %}
+  <div class="container">
+    <!-- Sidhuvud -->
+    <header class="site-header my-4">
+      <div class="row">
+        <div class="col text-center">
+          <h1>Tävling & Träning</h1>
+          <p class="lead">Resurser för dig som tränar eller tävlar på Stora Höga Ridklubb.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigationsmeny för relaterade noder -->
+    <nav class="nav justify-content-center mb-4">
+      <a class="nav-link active" href="/node/1">Tävling</a>
+      <a class="nav-link" href="/node/2">Privathästar</a>
+      <a class="nav-link" href="/node/3">Träning</a>
+    </nav>
+
+    <!-- Inledande beskrivning -->
+    <section class="mb-5">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Om den här sidan</h2>
+          <p>Denna sida är en samlingsplats för allt som rör träning och tävling, här hittar du resurser och uppdateringar.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="{{ directory }}/images/traning.jpg" class="img-fluid rounded" alt="Träning">
+        </div>
+      </div>
+    </section>
+
+    <!-- Accordion för innehåll -->
+    <div class="accordion mb-5" id="trainingAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            Träningsschema
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#trainingAccordion">
+          <div class="accordion-body">
+            {{ drupal_entity('node', 1) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            Kalender
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#trainingAccordion">
+          <div class="accordion-body">
+            {{ drupal_entity('node', 2) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            Button
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#trainingAccordion">
+          <div class="accordion-body">
+            {{ drupal_entity('node', 3) }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Artikelutdrag -->
+    <section class="mb-5">
+      <h2>Utvalda Artiklar</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <article class="mb-4">
+            {{ drupal_entity('node', 5) }}
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="mb-4">
+            {{ drupal_entity('node', 6) }}
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="mb-4">
+            {{ drupal_entity('node', 7) }}
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aside -->
+    <aside class="row mb-5">
+      <div class="col-md-8">
+        <h3>Aside</h3>
+        {{ drupal_entity('node', 8) }}
+      </div>
+      <div class="col-md-4">
+        <h3>Innehåll</h3>
+        {{ drupal_entity('node', 9) }}
+      </div>
+    </aside>
+    <!-- Footer -->
+    <footer class="site-footer mt-5">
+      <div class="row">
+        <div class="col text-center">
+          <p>Innehåll footer</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+{% endblock %}
