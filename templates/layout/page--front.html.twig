@@ -53,26 +53,29 @@
 
 FÖLJT AV NYA #}
 
-<div id="carouselExample" class="carousel slide my-4" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    {% set items = drupal_view('carousel_nyheter', 'block_1').build['#rows'] ?? [] %}
-    {% for item in items %}
-      <div class="carousel-item {{ loop.first ? 'active' : '' }}">
-        <div class="d-block w-100 bg-light text-dark text-center p-5">
-          {{ item.content }}
+{% set view = drupal_view('carousel_nyheter', 'block_1') %}
+{% if view.build['#rows'] is defined %}
+  <div id="carouselExample" class="carousel slide my-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      {% for item in view.build['#rows'] %}
+        <div class="carousel-item {{ loop.first ? 'active' : '' }}">
+          <div class="d-block w-100 bg-light text-dark text-center p-5">
+            {{ item.content }}
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+{% endif %}
+
 
 
 
