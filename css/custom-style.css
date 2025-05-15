@@ -1,0 +1,37 @@
+
+  font-family: "Prata";
+  src:
+    local("Prata"),
+    url("../fonts/Prata-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Prata";
+}
+
+h1 span {
+  font-family: "Prata";
+}
+
+div span {
+  font-family: "Prata";
+}
+
+nav a {
+  font-family: "Prata";
+}
+
+div .btn{
+  font-family: "Prata";
+}
+
+div h1 {
+  font-family: "Prata";
+}
+
+
+div div {
+  font-family: "Prata";
+}
